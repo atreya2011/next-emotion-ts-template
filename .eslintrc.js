@@ -8,7 +8,7 @@ module.exports = {
       jsx: true, // Allows for the parsing of JSX
     },
   },
-  ignorePatterns: ["!.prettierrc.js", "!.lintstagedrc.js", "!.huskyrc.js"], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
+  ignorePatterns: ["!.prettierrc.js", "!.lintstagedrc.js"], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
   settings: {
     react: {
       version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
@@ -26,7 +26,7 @@ module.exports = {
     "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    "prettier",
     "plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
@@ -37,6 +37,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["error"], // Why would you want unused vars?
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "jsx-a11y/no-onchange": "off",
     // This rule is not compatible with Next.js's <Link /> components
     "jsx-a11y/anchor-is-valid": [
       "error",
