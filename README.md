@@ -1,8 +1,8 @@
-# Next.js Starter Template with TailwindCSS, TypeScript et al
+# Next.js Starter Template with Emotion, TypeScript et al
 
 This repo contains an opinionated starter template for Next.js pre-installed and configured with the following:
 
-- TailwindCSS for styling: <https://tailwindcss.com/docs>
+- Emotion for styling using CSS in JS: <https://emotion.sh/>
 - ESLint for code linting: <https://eslint.org>
 - Prettier for code formating: <https://prettier.io/>
 - Husky for handling git hooks: <https://typicode.github.io/husky/#/>
@@ -14,9 +14,9 @@ This repo contains an opinionated starter template for Next.js pre-installed and
 Run the following command to get started with a new project using this template:
 
 ```bash
-npx create-next-app [project-name] -e https://github.com/atreya2011/next-tailwind-ts-template
+npx create-next-app [project-name] -e https://github.com/atreya2011/next-emotion-ts-template
 # or
-yarn create next-app [project-name] -e https://github.com/atreya2011/next-tailwind-ts-template
+yarn create next-app [project-name] -e https://github.com/atreya2011/next-emotion-ts-template
 ```
 
 Run the development server:
