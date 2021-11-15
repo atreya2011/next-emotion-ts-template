@@ -28,16 +28,18 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "prettier",
     "plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    "next",
   ],
   // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
   rules: {
     "prettier/prettier": ["error", {}, { usePrettierrc: true }],
     "react/react-in-jsx-scope": "off", // No need to import React when using Next.js
     "react/prop-types": "off", // We will use TypeScript's types for component props instead
-    "@typescript-eslint/no-unused-vars": ["error"], // Why would you want unused vars?
+    "@typescript-eslint/no-unused-vars": ["error", { ignoreRestSiblings: true }], // Why would you want unused vars?
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "jsx-a11y/no-onchange": "off",
+    "@next/next/no-img-element": "off",
     // This rule is not compatible with Next.js's <Link /> components
     "jsx-a11y/anchor-is-valid": [
       "error",
